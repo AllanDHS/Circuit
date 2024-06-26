@@ -1,0 +1,5 @@
+# Ignore les dossier non nécessaire
+node_modules
+
+# ignore le fichier mac
+.DS_Store
