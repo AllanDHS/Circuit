@@ -58,7 +58,7 @@ points.forEach(point => {
         text: point.text,
         fontSize: 30,
         fontFamily: 'Poppins',
-        fill: 'black',
+        fill: 'white',
         draggable: false,
     });
     text.match = point.match;
@@ -72,7 +72,7 @@ let startPoint = null;
 // Ligne temporaire pour les connexions en cours
 let line = new Konva.Line({
     points: [],
-    stroke: 'black',
+    stroke: 'white',
     strokeWidth: 5,
     lineCap: 'round',
     lineJoin: 'round',
@@ -115,7 +115,7 @@ stage.on('mouseup touchend', (e) => {
     if (endPoint) {
         const permanentLine = new Konva.Line({
             points: [startPoint.x() + startPoint.width() / 2, startPoint.y() + startPoint.height() / 2, endPoint.x() + endPoint.width() / 2, endPoint.y() + endPoint.height() / 2],
-            stroke: 'black',
+            stroke: 'white',
             strokeWidth: 5,
             lineCap: 'round',
             lineJoin: 'round',
