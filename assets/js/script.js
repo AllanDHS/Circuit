@@ -13,21 +13,21 @@ stage.add(layer);
 
 // Définir les points de départ et d'arrivée
 const startPoints = [
-    { text: 'A', match: '4' },
-    { text: 'B', match: '2' },
-    { text: 'C', match: '1' },
-    { text: 'D', match: '5' },
-    { text: 'E', match: '3' },
-    { text: 'F', match: '6' }
+    { text: 'A', match: 'I' },
+    { text: 'B', match: 'III' },
+    { text: 'C', match: 'V' },
+    { text: 'D', match: 'II' },
+    { text: 'E', match: 'VI' },
+    { text: 'F', match: 'IV' }
 ];
 
 const endPoints = [
-    { text: '1', match: 'C' },
-    { text: '2', match: 'B' },
-    { text: '3', match: 'E' }, // No corresponding match
-    { text: '4', match: 'A' },
-    { text: '5', match: 'D' },
-    { text: '6', match: 'F' }
+    { text: 'I', match: 'A' },
+    { text: 'II', match: 'D' },
+    { text: 'III', match: 'B' }, // No corresponding match
+    { text: 'IV', match: 'F' },
+    { text: 'V', match: 'C' },
+    { text: 'VI', match: 'E' }
 ];
 
 const margin = 30; // Marge pour éviter les bords
@@ -148,12 +148,14 @@ document.getElementById('reset-button').addEventListener('click', () => {
     layer.draw();
 });
 
-// Ajouter un bouton de validation
 document.getElementById('validate-button').addEventListener('click', () => {
     const correctPairs = startPoints.length * 2;
     if (connectedPairs.size === correctPairs) {
-        alert('Bravo, vous avez relié tous les points correctement !');
+        const video = document.getElementById('success-video');
+        video.style.display = 'block';
+        video.play();
     } else {
         alert('Certaines connexions sont incorrectes ou manquantes. Veuillez réessayer.');
     }
 });
+

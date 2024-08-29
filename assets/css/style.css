@@ -47,6 +47,7 @@ button {
     border-radius: 5px;
     width: 120px;
     border: none;
+    border: solid 1px white;
     transition: color 0.4s ease;
 }
 
@@ -56,6 +57,7 @@ button {
     border-radius: 5px;
     width: 120px;
     border: none;
+    border: solid 1px white;
     transition: color 0.4s ease;
 }
 
@@ -67,10 +69,12 @@ button {
 }
 
 #reset-button:hover{
-    color: red;
+    color: #ff0000;
+    border: solid 1px #ff0000;
     
 }
 #validate-button:hover{
-    color: rgb(0, 211, 0);
+    color: #00d300;
+    border: solid 1px #00d300;
 }
 
