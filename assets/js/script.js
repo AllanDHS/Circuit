@@ -1,3 +1,6 @@
+console.log('Script loaded');
+
+
 // Créer une scène Konva
 const width = window.innerWidth * 0.8;
 const height = window.innerHeight * 0.7;
